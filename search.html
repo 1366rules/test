@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results | 1366+1402 Evony Wiki</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="wiki-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">1366+1402<span> EVONY</span></a>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#rules">Rules</a>
+            <a href="index.html#sub-cities">Sub Cities</a>
+            <a href="index.html#warScoreData">War Score</a>
+            <a href="wiki.html">Wiki</a>
+        </div>
+    </nav>
+
+    <!-- Search Results Section -->
+    <section class="wiki-hero" style="min-height: 300px;">
+        <div class="wiki-hero-content">
+            <h1>Search Results</h1>
+            <div class="wiki-search-container" style="max-width: 800px;">
+                <form action="search.html" method="GET" id="search-form">
+                    <input type="text" class="wiki-search" name="q" placeholder="Search the wiki..." value="">
+                    <button type="submit" class="wiki-search-btn"><i class="fas fa-search"></i> Search</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div class="wiki-container">
+        <main class="wiki-content" style="width: 100%;">
+            <article class="wiki-article">
+                <h2>Search Results for "<span id="search-term"></span>"</h2>
+                <div id="search-results" class="article-content">
+                    <div class="loading-row">
+                        <div class="loading-spinner"></div>
+                        <span>Loading search results...</span>
+                    </div>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <script>
+        // Get search term from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchTerm = urlParams.get('q');
+        
+        if (searchTerm) {
+            document.getElementById('search-term').textContent = searchTerm;
+            document.querySelector('.wiki-search').value = searchTerm;
+            
+            // Simulate search results (in a real app, this would be an API call)
+            setTimeout(() => {
+                const resultsContainer = document.getElementById('search-results');
+                
+                if (searchTerm.toLowerCase().includes('pvp')) {
+                    resultsContainer.innerHTML = `
+                        <div class="wiki-resource-card">
+                            <h3><i class="fas fa-crosshairs"></i> PvP Attack Layering Guide</h3>
+                            <p>Learn advanced troop composition strategies for player battles.</p>
+                            <a href="pvp-guide.html" class="cta-button" style="display: inline-block; margin-top: 1rem;">
+                                View Guide <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+						<div class="wiki-resource-card">
+                            <h3><i class="fas fa-crosshairs"></i> Beginner's Guide</h3>
+                            <p>Learn advanced troop composition strategies for player battles.</p>
+                            <a href="beginner-guide.html" class="cta-button" style="display: inline-block; margin-top: 1rem;">
+                                View Guide <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="wiki-resource-card" style="margin-top: 1.5rem;">
+                            <h3><i class="fas fa-shield-alt"></i> Defense Strategies</h3>
+                            <p>How to protect your keep from enemy attacks.</p>
+                            <a href="wiki.html#defense-strategies" class="cta-button" style="display: inline-block; margin-top: 1rem;">
+                                View Section <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    `;
+                } else if (searchTerm.toLowerCase().includes('beginner')) {
+                    resultsContainer.innerHTML = `
+                        <div class="wiki-resource-card">
+                            <h3><i class="fas fa-gamepad"></i> Beginner's Guide</h3>
+                            <p>Essential information for new players starting in Evony.</p>
+                            <a href="wiki.html#game-guide" class="cta-button" style="display: inline-block; margin-top: 1rem;">
+                                View Guide <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    `;
+                } else {
+                    resultsContainer.innerHTML = `
+                        <div class="no-data">
+                            <i class="fas fa-search" style="font-size: 3rem; margin-bottom: 1rem; color: var(--secondary);"></i>
+                            <p>No results found for "${searchTerm}"</p>
+                            <p>Try searching for: PvP, Beginner, Resources, Buildings, or Military</p>
+                        </div>
+                    `;
+                }
+            }, 1000);
+        } else {
+            window.location.href = 'wiki.html';
+        }
+        
+        // Form submission
+        document.getElementById('search-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const searchValue = document.querySelector('.wiki-search').value.trim();
+            if (searchValue) {
+                window.location.href = `search.html?q=${encodeURIComponent(searchValue)}`;
+            }
+        });
+    </script>
+</body>
+</html>

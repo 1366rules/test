@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1366 + 1402 Evony - The Kings Return</title>
+    <meta name="author" content="Angga Kurniawan (@g4rzk)">
+    <meta name="keywords" content="1366 Evony, Evony">
+    <meta name="description" content="Join hundreds of players on server 1366+1402 with the best strategy. Build your keep, forge alliances, player vs player and conquer the throne.">
+
+    <link REL="shortcut icon" href="https://www.evony.com/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;600;700&family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="#" class="logo">1366+1402<span> EVONY</span></a>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#rules">Rules</a>
+            <a href="#sub-cities">Sub Cities</a>
+            <a href="#warScoreData">War Score</a>
+            <a href="wiki.html">Wiki</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Experience Evony Like Never Before</h1>
+            <p>Join hundreds of players on server 1366+1402 with the best strategy. Build your keep, forge alliances, player vs player and conquer the throne.</p>
+        </div>
+        <img src="https://www.evony.com/image/img/heroes.png" alt="Evony Game Screenshot" class="hero-image">
+    </section>
+
+    <!-- Server Rules Section -->
+    <section class="server-rules" id="rules">
+        <div class="section-title">
+            <h2>Server Rules</h2>
+            <p>Please READ and Follow Rules Our Server</p>
+        </div>
+
+        <div class="rules-container">
+            <div class="rules-category">
+                <h3><i class="fas fa-shield-halved"></i> NAP and Kill Event</h3>
+                <ul class="rules-list">
+                    <p>Server 1366 + 1402 is a permanent NAP (Non-Aggression Pact) server and therefore does NOT follow the Evony event calendar. The Monarch Competition KE (Kill Event) is not in effect.</p>
+                    <li>Attacking and/or scouting any keep (castle) or subordinate city (sub) that belongs to a player in an alliance, or attacking/scouting any alliance city, is strictly prohibited. If a player desires this protection, they may join an alliance or spend 200 gems to create their own alliance.</li>
+                    <li>If a player in an alliance is attacked, the attacker will either pay compensation or be declared KoS (Kill on Sight) by the Server Council through a mail sent by the ruling King/Queen.</li>
+                    <li>If a player must expel their alt/farm from an alliance to plunder, the player must change the name of that alt/farm to prevent other players from attacking it. The name must contain the alliance acronym and the term mini, farm, rss, ore, wood, stone, food, etc. (Examples: SCCrss4Me, NFGMiniDel, PTOFarm1)</li>
+                    <li>Any keep that is not in an alliance and does not have the name changed as above is vulnerable to attack.</li>
+                </ul>
+            </div>
+
+            <div class="rules-category">
+                <h3><i class="fas fa-city"></i> Subordinate Cities</h3>
+                <ul class="rules-list">
+                    <li>Player owned sub cities must NOT be stolen, regardless whether or not the owner belongs to an alliance. If a player leaves the server and does not give their sub cities away, the alliance is responsible for their distribution.</li>
+                    <li>Do NOT attack an NPC sub city if a player is sitting next to it. The player may be leveling Generals or switching sub cities.</li>
+                    <li>It is almost impossible to cancel attacks if you are next to a target, so if Player1 attempts to take an NPC sub city while Player2 is in the process of leveling generals, Player1 will be responsible for compensation. Player1 will also need to give the sub back or risk becoming KoS.</li>
+                    <li>For the sake of proving ownership, it is beneficial to the player to take a screenshot of their keep next to the sub city before they release it.</li>
+                    <li>R5/4s are responsible for kicking sub city thieves from the alliance for a two-week probationary period. If the player continues to steal sub cities and/or does not return the sub city to the rightful owner, they will become KoS.</li>
+                    <li>KOS-players lose protection from all server rules. R5/4s are responsible for expelling and/or not accepting the KoS member. If an alliance harbors a KoS member for more than 12 hours, the entire alliance will become KoS.</li>
+                </ul>
+            </div>
+
+            <div class="rules-category">
+                <h3><i class="fas fa-solid fa-wheat-awn-circle-exclamation"></i> Tiles, Relic and Barb</h3>
+                <ul class="rules-list">
+                    <li><strong>Barbarians: Do NOT attack Barbarian Castles occupied by an alliance:</strong> It is advisable to take a screenshot as soon as you start marching towards a Barb Castle as proof of “ownership.”</li>
+                    <li><strong>Pyramids: If you see a player marching to a pyramid, do NOT send a speed march or port next to it to try to claim it:</strong> Pyramid theft is responsible for multiple disputes, so it is advisable to take a screenshot as soon as you start marching towards the pyramid. If someone steals your pyramid, inform your R5/4s and provide the screenshot as proof, allowing them to inform the thief’s alliance of the situation. Alliance leadership is responsible for reprimanding the pyramid thief. If pyramid theft becomes habitual, the issue will go to Server Council. The penalty for attacking an occupied pyramid will be twice the compensation to the rightful pyramid owner</li>
+                    <li><strong>Relics: Relic theft is also a common problem:</strong> If another alliance attacks your relic and kills your troops, the attacker will pay compensation or become KoS. If another alliance takes your relic and there are no casualties, send a mail to the person occupying the relic, as well as your and their R5/R4s. If there is communication in less than 12 hours, the occupier can choose to leave the relic or open a new relic. No harm, no foul. If there is no response within 12 hours, you may attack the relic.</li>
+                </ul>
+            </div>
+
+
+            <div class="rules-category">
+                <h3><i class="fas fa-circle-question"></i> SvS and Purge</h3>
+                <ul class="rules-list">
+                    <li>Server versus Server War happens every two weeks. It starts at Friday midnight server time and lasts for 48 hours. PURGE: To prevent giving points to the enemy server, a purge will start at 22:00 server time. Before the start of the purge, all players must have a truce shield (bubble) and recall all troops from relics, pyramids, resource tiles, camps, etc. (anywhere a player can get attacked). THERE WILL BE NO SUB CITY STEALING DURING PURGE.</li>
+                    <li><strong>Anybody who is purging WILL add Purge to their Monarch name. (examples: OdinPurge, PurgerDel, PurgeYou)</strong></li>
+                    <li><strong>Players may NOT attack anyone with the Purge name format. Members without a bubble and without Purge in their name are vulnerable to attack.</strong></li>
+                    <li><strong>If a player has an emergency/ red evony and is unable to bubble, a green bubble and protection will be granted by high exception. This will be communicated in World Chat, on the server council discord, and with as many R4/5’s as possible so an alliance mail can be sent.</strong></li>
+                </ul>
+            </div>
+
+            <div class="rules-category">
+                <h3><i class="fas fa-users"></i> Conflict Resolution</h3>
+                <ul class="rules-list">
+                    <li><strong>If a conflict arises regarding rule breaking, players must try to resolve their conflict at the lowest level possible (player to player): </strong> If they are not capable of doing so, the involved alliance’s R5/4s must intervene. If the R5/4s are unable to solve the issue, the Server Council will intervene.</li>
+                    <li><strong>“Revenge” is not an approved method of conflict resolution:</strong> If a player or their alliance reacts without going through Step 1, they will need to send compensation for the resulting damage or go KoS.</li>
+                    <li><strong>Accidental hits are especially NOT a cause for retaliation.</strong></li>
+                    <li><strong>Examples of accidental hits include, but are not limited to, taking a NPC city when a player is sitting next to it, hitting one occupied resource tile, hitting one occupied pyramid or one barb castle during their respective events, etc.</li>
+                    <li><strong>If a player makes multiple prohibited attacks, it is malicious intent and the player will be KoS.</li>
+                </ul>
+            </div>
+
+            <div class="rules-category">
+                <h3><i class="fas fa-crown"></i> Queen/King and Throne List</h3>
+                <ul class="rules-list">
+                    <li><strong>Players who have their Wonder 1 open will be eligible to be Queen or King of the server.</li>
+                    <li>Each person will be Queen/King/Conqueror for two consecutive weeks to qualify for opening their Wonder 2. Conquering throne will be played by ear. Priority goes to players needing to open Wonder 2; however, in the event the enemy throne will be challenging to conquer, an older player can conquer to achieve their fame points. In the event the enemy throne will be almost impossible to conquer, there will be a throne truce.</li>
+                    <li><strong>Throne truce will not be determined until the first day of SvS.</strong></li>
+                    <li><strong>It is preferable for players to have a positive score in SvS when they get their wings; however, up to 15% of the player’s score may be from negative points. If more than 15% of their score is negative points, they will drop to the bottom of the list for taking King/Queenship, even if they have Wonder 1 open.</li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <div class="rules-footer">
+            <p>By playing on our server, you agree to abide by these rules. Last updated: <span id="rules-date">November 15, 2023</span></p>
+            <button class="cta-button rules-agree-btn">
+                <i class="fas fa-check-circle"></i> I Understand and Accept the Rules
+            </button>
+        </div>
+    </section>
+
+    <!-- Sub Cities Section -->
+    <section class="sub-cities" id="sub-cities">
+        <div class="section-title">
+            <h2>Sub City Server</h2>
+            <p>Key locations for expanding your empire's influence</p>
+        </div>
+
+        <div class="sub-city-grid">
+            <div class="sub-city-card">
+                <div class="sub-city-image">
+                    <img src="https://raw.githubusercontent.com/1366rules/read/refs/heads/main/img/china.PNG" alt="Sub China Purple">
+                    <div class="coordinates">X: 88, Y: 38</div>
+                </div>
+                <div class="sub-city-info">
+                    <h3>Sub China Purple</h3>
+                    <div class="city-stats">
+                        <span><i class="fas fa-warehouse"></i> Storage Bonus: +16%</span>
+                        <span><i class="fas fa-shield-alt"></i> Training Speed: +8%</span>
+                        <span><i class="fas fa-users"></i> Training Speed Sub: +18%</span>
+                        <span><i class="fas fa-hospital"></i> Survival Rate: +6%</span>
+                        <!--<span><i class="fas fa-shield-alt"></i> Defense: +25%</span> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-city-card">
+                <div class="sub-city-image">
+                    <img src="https://raw.githubusercontent.com/1366rules/read/refs/heads/main/img/arabia.PNG" alt="Sub Arabia Gold">
+                    <div class="coordinates">X: 772, Y: 330</div>
+                </div>
+                <div class="sub-city-info">
+                    <h3>Sub Arabia Gold</h3>
+                    <div class="city-stats">
+                        <span><i class="fas fa-hospital"></i> Hospital Capacity: +12%</span>
+                        <span><i class="fas fa-running"></i> Healing Speed: +8%</span>
+                        <span><i class="fas fa-users"></i> Training Speed: +15%</span>
+                        <span><i class="fas fa-hospital"></i> Survival Rate: +6%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-city-card">
+                <div class="sub-city-image">
+                    <img src="https://raw.githubusercontent.com/1366rules/read/refs/heads/main/img/america.PNG" alt="Sub America Purple">
+                    <div class="coordinates">X: 450, Y: 947</div>
+                </div>
+                <div class="sub-city-info">
+                    <h3>Sub America Purple</h3>
+                    <div class="city-stats">
+                        <span><i class="fas fa-coins"></i> Gold Production: +30%</span>
+                        <span><i class="fas fa-flask"></i> Research Speed: +9%</span>
+                        <span><i class="fas fa-running"></i> Training Speed: +10%</span>
+                        <span><i class="fas fa-hospital"></i> Survival Rate: +6%</span>
+                        <!--hourglass-half -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-city-card">
+                <div class="sub-city-image">
+                    <img src="https://raw.githubusercontent.com/1366rules/read/refs/heads/main/img/america.PNG" alt="Sub America Blue">
+                    <div class="coordinates">X: 78, Y: 826</div>
+                </div>
+                <div class="sub-city-info">
+                    <h3>Sub America Blue</h3>
+                    <div class="city-stats">
+                        <span><i class="fas fa-coins"></i> Gold Production: +30%</span>
+                        <span><i class="fas fa-flask"></i> Research Speed: +9%</span>
+                        <span><i class="fas fa-running"></i> Training Speed: +10%</span>
+                        <span><i class="fas fa-hospital"></i> Survival Rate: +6%</span>
+                        <!--hourglass-half -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-city-card">
+                <div class="sub-city-image">
+                    <img src="https://raw.githubusercontent.com/1366rules/read/refs/heads/main/img/china.PNG" alt="Sub China Blue">
+                    <div class="coordinates">X: 923, Y: 762</div>
+                </div>
+                <div class="sub-city-info">
+                    <h3>Sub China Blue</h3>
+                    <div class="city-stats">
+                        <span><i class="fas fa-warehouse"></i> Storage Bonus: +16%</span>
+                        <span><i class="fas fa-shield-alt"></i> Training Speed: +8%</span>
+                        <span><i class="fas fa-users"></i> Training Speed Sub: +18%</span>
+                        <span><i class="fas fa-hospital"></i> Survival Rate: +6%</span>
+                        <!--<span><i class="fas fa-shield-alt"></i> Defense: +25%</span> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-city-card">
+                <div class="sub-city-image">
+                    <img src="https://raw.githubusercontent.com/1366rules/read/refs/heads/main/img/arabia.PNG" alt="Sub Arabia Blue">
+                    <div class="coordinates">X: 1009, Y: 321</div>
+                </div>
+                <div class="sub-city-info">
+                    <h3>Sub Arabia Blue</h3>
+                    <div class="city-stats">
+                        <span><i class="fas fa-hospital"></i> Hospital Capacity: +12%</span>
+                        <span><i class="fas fa-running"></i> Healing Speed: +8%</span>
+                        <!--<span><i class="fas fa-warehouse"></i> Storage Bonus: +20%</span> -->
+                        <span><i class="fas fa-users"></i> Training Speed: +15%</span>
+                        <span><i class="fas fa-hospital"></i> Survival Rate: +6%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Server War Scores Section -->
+    <section class="war-scores" id="warScoreData">
+        <div class="section-title">
+            <h2>Server War Scores</h2>
+            <p>Latest battle statistics and player performance metrics</p>
+            <div class="last-updated" id="score-date">
+                <i class="fas fa-calendar-alt"></i> Loading date...
+            </div>
+        </div>
+
+        <div class="score-controls">
+            <div class="controls-left">
+                <div class="search-box">
+                    <input type="text" id="war-score-search" placeholder="Search players...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="date-navigation">
+                    <button id="prev-date"><i class="fas fa-chevron-left"></i></button>
+                    <span id="current-date">-</span>
+                    <button id="next-date"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="controls-right">
+                <select id="score-type-filter">
+                    <option value="all">All Players</option>
+                    <option value="top-positive">Top Positive</option>
+                    <option value="top-negative">Top Negative</option>
+                    <option value="balanced">Most Balanced</option>
+                </select>
+                <button id="refresh-scores" class="refresh-btn">
+                    <i class="fas fa-sync-alt"></i> Refresh
+                </button>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <div class="table-header">
+                <div class="table-row">
+                    <div class="table-cell rank">Rank</div>
+                    <div class="table-cell player">Player Name</div>
+                    <div class="table-cell alliance">Alliance</div>
+                    <div class="table-cell positive">Positive Score <i class="fas fa-arrow-up"></i></div>
+                    <div class="table-cell negative">Negative Score <i class="fas fa-arrow-down"></i></div>
+                    <div class="table-cell balance">Balance</div>
+                </div>
+            </div>
+            <div class="table-body" id="war-score-data">
+                <div class="loading-row">
+                    <div class="loading-spinner"></div>
+                    <span>Loading war score data...</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="download-section">
+            <div class="download-options">
+                <button class="download-btn" id="download-excel">
+                    <i class="fas fa-file-excel"></i> Download Excel
+                </button>
+                <button class="download-btn" id="download-csv">
+                    <i class="fas fa-file-csv"></i> Download CSV
+                </button>
+            </div>
+            <div class="data-info">
+                <p><i class="fas fa-info-circle"></i> Data is updated every 6 hours. Last update: <span id="last-update-time">-</span></p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Get all available dates and sort them
+        const availableDates = Object.keys(warScoreData).sort((a, b) => new Date(b) - new Date(a));
+        let currentDateIndex = 0;
+
+        // Function to format date
+        function formatDate(dateStr) {
+            const date = new Date(dateStr);
+            return date.toLocaleDateString('en-US', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+        }
+
+        // Function to render war score data
+        function renderWarScoreData(date) {
+            const tableBody = document.getElementById('war-score-data');
+            const dateDisplay = document.getElementById('current-date');
+            const scoreDate = document.getElementById('score-date');
+            const lastUpdate = document.getElementById('last-update-time');
+
+            // Show loading state
+            tableBody.innerHTML = `
+				<div class="loading-row">
+					<div class="loading-spinner"></div>
+					<span>Loading war score data...</span>
+				</div>
+			`;
+
+            // Simulate loading delay (remove in production)
+            setTimeout(() => {
+                const data = warScoreData[date] || [];
+
+                // Update date displays
+                dateDisplay.textContent = formatDate(date);
+                scoreDate.innerHTML = `<i class="fas fa-calendar-alt"></i> ${formatDate(date)}`;
+                lastUpdate.textContent = new Date().toLocaleString();
+
+                // Clear table
+                tableBody.innerHTML = '';
+
+                if (data.length === 0) {
+                    tableBody.innerHTML = `
+						<div class="no-data">
+							<i class="fas fa-database"></i>
+							<span>No war score data available for this date</span>
+						</div>
+					`;
+                    return;
+                }
+
+                // Apply filters
+                const searchTerm = document.getElementById('war-score-search').value.toLowerCase();
+                const scoreType = document.getElementById('score-type-filter').value;
+
+                let filteredData = data.filter(player =>
+                    player.name.toLowerCase().includes(searchTerm) ||
+                    player.alliance.toLowerCase().includes(searchTerm)
+                );
+
+                // Apply score type filter
+                switch (scoreType) {
+                    case 'top-positive':
+                        filteredData.sort((a, b) => b.positive - a.positive);
+                        break;
+                    case 'top-negative':
+                        filteredData.sort((a, b) => b.negative - a.negative);
+                        break;
+                    case 'balanced':
+                        filteredData.sort((a, b) => Math.abs(b.balance) - Math.abs(a.balance));
+                        break;
+                    default:
+                        // Default sorting by rank
+                        filteredData.sort((a, b) => a.rank - b.rank);
+                }
+
+                // Render rows
+                filteredData.forEach(player => {
+                    const row = document.createElement('div');
+                    row.className = 'table-row';
+
+                    const balanceClass = player.balance >= 0 ? 'positive' : 'negative';
+
+                    row.innerHTML = `
+						<div class="table-cell rank">${player.rank}</div>
+						<div class="table-cell player">
+							<div class="player-avatar">${player.name.charAt(0)}</div>
+							<span>${player.name}</span>
+						</div>
+						<div class="table-cell alliance">${player.alliance}</div>
+						<div class="table-cell positive">+${player.positive}</div>
+						<div class="table-cell negative">-${player.negative}</div>
+						<div class="table-cell balance ${balanceClass}">
+							${player.balance >= 0 ? '' : ''}${player.balance}
+						</div>
+					`;
+
+                    tableBody.appendChild(row);
+                });
+            }, 800); // Simulated delay
+        }
+
+        // Function to navigate dates
+        function navigateDates(direction) {
+            if (direction === 'prev' && currentDateIndex < availableDates.length - 1) {
+                currentDateIndex++;
+            } else if (direction === 'next' && currentDateIndex > 0) {
+                currentDateIndex--;
+            }
+
+            renderWarScoreData(availableDates[currentDateIndex]);
+        }
+
+        // Event listeners
+        document.getElementById('war-score-search').addEventListener('input', () => {
+            renderWarScoreData(availableDates[currentDateIndex]);
+        });
+
+        document.getElementById('score-type-filter').addEventListener('change', () => {
+            renderWarScoreData(availableDates[currentDateIndex]);
+        });
+
+        document.getElementById('prev-date').addEventListener('click', () => navigateDates('prev'));
+        document.getElementById('next-date').addEventListener('click', () => navigateDates('next'));
+
+        document.getElementById('refresh-scores').addEventListener('click', () => {
+            renderWarScoreData(availableDates[currentDateIndex]);
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            if (availableDates.length > 0) {
+                currentDateIndex = 0;
+                renderWarScoreData(availableDates[currentDateIndex]);
+            }
+
+            // Set up download buttons (in production these would link to actual files)
+            document.getElementById('download-excel').addEventListener('click', (e) => {
+                e.preventDefault();
+                alert('In production, this would download the Excel file for ' + availableDates[currentDateIndex]);
+            });
+
+            document.getElementById('download-csv').addEventListener('click', (e) => {
+                e.preventDefault();
+                alert('In production, this would download the CSV file for ' + availableDates[currentDateIndex]);
+            });
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content" id="footer">
+            <div class="footer-column">
+                <h3>1366+1402 Evony</h3>
+                <p>The next generation of 1366+1402 Evony strategy server. Build, conquer and rule your throne with hundreds of players worldwide.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#rules">Rules</a></li>
+                    <li><a href="#sub-cities">Sub Cities</a></li>
+                    <li><a href="#warScoreData">War Score</a></li>
+                    <li><a href="#footer">Community</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Community</h3>
+                <ul>
+                    <li><a href="#">Forums</a></li>
+                    <li><a href="#">Discord</a></li>
+                    <li><a href="#">Facebook Group</a></li>
+                    <li><a href="wiki.html">Wiki</a></li>
+                    <li><a href="#">Fan Art</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 1366+1402 Evony. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+
+        // Rules Agreement Button
+        document.querySelector('.rules-agree-btn').addEventListener('click', function() {
+            // Store agreement in localStorage
+            localStorage.setItem('rulesAgreed', 'true');
+
+            // Show confirmation
+            this.innerHTML = '<i class="fas fa-check"></i> Rules Accepted';
+            this.style.backgroundColor = '#2E7D32';
+
+            // Optional: Scroll to top
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Check if rules were already agreed to
+        document.addEventListener('DOMContentLoaded', function() {
+            if (localStorage.getItem('rulesAgreed')) {
+                const btn = document.querySelector('.rules-agree-btn');
+                btn.innerHTML = '<i class="fas fa-check"></i> Rules Accepted';
+                btn.style.backgroundColor = '#2E7D32';
+                btn.disabled = true;
+            }
+        });
+    </script>
+</body>
+
+</html>

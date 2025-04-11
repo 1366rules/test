@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1366 + 1402 Evony - The Kings Return</title>
+
+    <meta name="author" content="Angga Kurniawan (@g4rzk)">
+    <meta name="keywords" content="1366 Evony, Evony">
+    <meta name="description" content="Join hundreds of players on server 1366+1402 with the best strategy. Build your keep, forge alliances, player vs player and conquer the throne.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;600;700&family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://www.evony.com/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional inline animations */
+        .wiki-hero h1 {
+            animation: textGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes textGlow {
+            from {
+                text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+            }
+
+            to {
+                text-shadow: 0 0 15px rgba(136, 211, 206, 0.6);
+            }
+        }
+
+        .wiki-resource-icon {
+            animation: iconPulse 4s ease-in-out infinite;
+        }
+
+        @keyframes iconPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+
+<body class="wiki-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html#" class="logo">1366+1402<span> EVONY</span></a>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+            <a href="index.html#">Home</a>
+            <a href="index.html#rules">Rules</a>
+            <a href="index.html#sub-cities">Sub Cities</a>
+            <a href="index.html#warScoreData">War Score</a>
+            <a href="#">Wiki</a>
+        </div>
+    </nav>
+
+    <!-- Wiki Hero Section -->
+    <section class="wiki-hero">
+        <div class="wiki-hero-content">
+            <h1>1366+1402 Evony Wiki</h1>
+            <p>Your comprehensive guide to mastering the game</p>
+            <div class="wiki-search-container">
+                <input type="text" class="wiki-search" placeholder="Search the wiki...">
+                <button class="wiki-search-btn"><i class="fas fa-search"></i> Search</button>
+            </div>
+        </div>
+    </section>
+	
+    <!-- Wiki Main Content -->
+    <div class="wiki-container">
+        <!-- Sidebar Navigation -->
+        <aside class="wiki-sidebar">
+            <div class="wiki-sidebar-section">
+                <h3><i class="fas fa-book-open"></i> Game Basics</h3>
+                <ul>
+                    <li><a href="beginner-guide.html" class="sidebar-link">Game Guide & Tutorials</a></li>
+					<li><a href="pvp-guide.html" class="sidebar-link">PvP Attack Guide</a></li>
+					<li><a href="resources.html" class="sidebar-link">Resources</a></li>
+					<li><a href="buildings.html" class="sidebar-link">Buildings</a></li>
+                </ul>
+            </div>
+
+            <div class="wiki-sidebar-section">
+                <h3><i class="fas fa-shield-alt"></i> Military</h3>
+                <ul>
+                    <li><a href="#troop-types" class="sidebar-link">Troop Types</a></li>
+                    <li><a href="#combat-mechanics" class="sidebar-link">Combat Mechanics</a></li>
+                    <li><a href="#defense-strategies" class="sidebar-link">Defense Strategies</a></li>
+                </ul>
+            </div>
+
+            <div class="wiki-sidebar-section">
+                <h3><i class="fas fa-chess-queen"></i> Advanced</h3>
+                <ul>
+                    <li><a href="#alliance-management" class="sidebar-link">Alliance Management</a></li>
+                    <li><a href="#events" class="sidebar-link">Events</a></li>
+                    <li><a href="#research" class="sidebar-link">Research</a></li>
+                </ul>
+            </div>
+
+            <div class="wiki-sidebar-section">
+                <h3><i class="fas fa-video"></i> Video Guides</h3>
+                <ul>
+                    <li><a href="#beginner-guides" class="sidebar-link">Beginner Guides</a></li>
+                    <li><a href="#advanced-tactics" class="sidebar-link">Advanced Tactics</a></li>
+                    <li><a href="#event-walkthroughs" class="sidebar-link">Event Walkthroughs</a></li>
+                </ul>
+            </div>
+        </aside>
+	</div>
+	
+    <!-- Wiki Footer -->
+    <footer class="wiki-footer">
+        <div class="wiki-footer-content">
+            <div class="wiki-update">
+                <h3><i class="fas fa-sync-alt"></i> Wiki Updates</h3>
+                <ul class="wiki-update-list">
+                    <li class="wiki-update-item">
+                        <span class="wiki-update-date">Nov 15, 2023</span> - Added Troop Guides
+                    </li>
+                    <li class="wiki-update-item">
+                        <span class="wiki-update-date">Nov 10, 2023</span> - Updated Resource Section
+                    </li>
+                    <li class="wiki-update-item">
+                        <span class="wiki-update-date">Nov 5, 2023</span> - New Beginner Videos Added
+                    </li>
+                </ul>
+            </div>
+            <div class="wiki-contribute">
+                <h3><i class="fas fa-edit"></i> Contribute</h3>
+                <p>Help us improve the wiki by submitting your knowledge!</p>
+                <button class="wiki-contribute-btn">
+                    <i href="mailto:admin@g4rzk.com" class="fas fa-edit"></i> Submit Edit
+                </button>
+            </div>
+        </div>
+        <div class="wiki-copyright">
+            <p>&copy; 2023 1366 Evony Wiki. All game content belongs to Evony.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.classList.toggle('fa-times');
+        });
+
+        // Tab functionality
+        document.querySelectorAll('.wiki-tab-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const tabId = this.getAttribute('data-tab');
+                const tabContainer = this.closest('.article-content');
+
+                // Remove active class from all buttons and content
+                tabContainer.querySelectorAll('.wiki-tab-button').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                tabContainer.querySelectorAll('.wiki-tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+
+                // Add active class to clicked button and corresponding content
+                this.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Smooth scrolling for sidebar links
+        document.querySelectorAll('.sidebar-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+
+                // Update URL without page jump
+                history.pushState(null, null, targetId);
+            });
+        });
+		<!-- In the head section -->
+		// Handle search functionality
+		document.querySelector('.wiki-search-btn').addEventListener('click', function() {
+			const searchTerm = document.querySelector('.wiki-search').value.trim();
+			if (searchTerm) {
+				window.location.href = `search.html?q=${encodeURIComponent(searchTerm)}`;
+			}
+		});
+		
+		// Allow Enter key to trigger search
+		document.querySelector('.wiki-search').addEventListener('keypress', function(e) {
+			if (e.key === 'Enter') {
+				const searchTerm = this.value.trim();
+				if (searchTerm) {
+					window.location.href = `search.html?q=${encodeURIComponent(searchTerm)}`;
+				}
+			}
+		});
+	</script>
+</body>
+
+</html>

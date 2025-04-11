@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner's Guide | 1366+1402 Evony Wiki</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .quick-tips {
+            background: rgba(110, 69, 226, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .step-by-step {
+            counter-reset: step-counter;
+            margin: 2rem 0;
+        }
+        
+        .step {
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .step::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: var(--primary);
+            color: white;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .resource-priority {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .priority-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-top: 4px solid var(--accent);
+        }
+    </style>
+</head>
+<body class="wiki-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">1366+1402<span> EVONY</span></a>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#rules">Rules</a>
+            <a href="index.html#sub-cities">Sub Cities</a>
+            <a href="index.html#warScoreData">War Score</a>
+            <a href="wiki.html">Wiki</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="wiki-hero">
+        <div class="wiki-hero-content">
+            <h1>Beginner's Guide</h1>
+            <p>Your complete roadmap to getting started in Evony: The King's Return</p>
+        </div>
+    </section>
+
+    <div class="wiki-container">
+        <aside class="wiki-sidebar">
+            <div class="wiki-sidebar-section">
+                <h3><i class="fas fa-book-open"></i> Guide Sections</h3>
+                <ul>
+                    <li><a href="#getting-started">Getting Started</a></li>
+                    <li><a href="#first-7-days">First 7 Days</a></li>
+                    <li><a href="#resources">Resource Management</a></li>
+                    <li><a href="#building">Building Strategy</a></li>
+                    <li><a href="#alliances">Alliances</a></li>
+                    <li><a href="#daily-routine">Daily Routine</a></li>
+                </ul>
+            </div>
+            
+            <div class="wiki-sidebar-section">
+                <h3><i class="fas fa-lightbulb"></i> Quick Tips</h3>
+                <ul>
+                    <li><a href="#avoid-mistakes">Common Mistakes</a></li>
+                    <li><a href="#speedups">Using Speedups</a></li>
+                    <li><a href="#protection">Staying Protected</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="wiki-content">
+            <!-- Getting Started Section -->
+            <article id="getting-started" class="wiki-article">
+                <h2><i class="fas fa-flag"></i> Getting Started in Evony</h2>
+                <div class="article-content">
+                    <p>Evony: The King's Return is a complex strategy game where you build your city, train troops, and compete with other players. Here's what every new player needs to know:</p>
+                    
+                    <div class="quick-tips">
+                        <h4><i class="fas fa-bolt"></i> Quick Start Tips</h4>
+                        <ul>
+                            <li>Complete the tutorial - it gives great rewards</li>
+                            <li>Join an alliance as soon as possible</li>
+                            <li>Always keep your builders busy</li>
+                            <li>Don't neglect your wall defenses</li>
+                            <li>Use a peace shield when offline</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Understanding the Basics</h3>
+                    <p>Evony has several key components you'll need to master:</p>
+                    
+                    <div class="wiki-resource-grid">
+                        <div class="wiki-resource-card">
+                            <div class="wiki-resource-icon">
+                                <i class="fas fa-city"></i>
+                            </div>
+                            <h5>Your Keep</h5>
+                            <p>The center of your empire. Upgrade this first as it unlocks other buildings and higher levels.</p>
+                        </div>
+                        
+                        <div class="wiki-resource-card">
+                            <div class="wiki-resource-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h5>Troops</h5>
+                            <p>Four types: Infantry, Cavalry, Archers, and Siege. Each counters another type in battle.</p>
+                        </div>
+                        
+                        <div class="wiki-resource-card">
+                            <div class="wiki-resource-icon">
+                                <i class="fas fa-chess-queen"></i>
+                            </div>
+                            <h5>Generals</h5>
+                            <p>Lead your armies and provide buffs. Some are better for attacking, others for defense.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- First 7 Days Section -->
+            <article id="first-7-days" class="wiki-article">
+                <h2><i class="fas fa-calendar-week"></i> First 7 Days Strategy</h2>
+                <div class="article-content">
+                    <p>The first week is crucial for setting up your long-term success. Follow this progression:</p>
+                    
+                    <div class="step-by-step">
+                        <div class="step">
+                            <h4>Day 1: Complete Tutorial</h4>
+                            <p>Follow the tutorial completely. It will guide you through basic buildings, training troops, and attacking monsters.</p>
+                        </div>
+                        
+                        <div class="step">
+                            <h4>Day 2-3: Resource Production</h4>
+                            <p>Focus on building and upgrading your resource production buildings (Farms, Sawmills, Quarries, Iron Mines).</p>
+                        </div>
+                        
+                        <div class="step">
+                            <h4>Day 4: Join an Alliance</h4>
+                            <p>Find an active alliance that fits your playstyle. Alliances provide protection, resources, and help.</p>
+                        </div>
+                        
+                        <div class="step">
+                            <h4>Day 5-6: Military Buildings</h4>
+                            <p>Build up your barracks, archery range, stable, and workshop. Start training a balanced army.</p>
+                        </div>
+                        
+                        <div class="step">
+                            <h4>Day 7: First PvE Content</h4>
+                            <p>Start attacking lower level monsters and joining alliance rallies on bigger monsters.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="wiki-info-box">
+                        <h4><i class="fas fa-exclamation-triangle"></i> Important!</h4>
+                        <p>The game gives new players a 7-day beginner's bubble. <strong>Do not let this expire without having another bubble ready!</strong> You will be vulnerable to attacks.</p>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Resource Management Section -->
+            <article id="resources" class="wiki-resource-card">
+                <h2><i class="fas fa-coins"></i> Resource Management</h2>
+                <div class="article-content">
+                    <p>Resources are the lifeblood of your empire. You'll need four main types:</p>
+                    
+                    <div class="resource-priority">
+                        <div class="priority-card">
+                            <h5><i class="fas fa-bread-slice"></i> Food</h5>
+                            <ul>
+                                <li>Used to train troops</li>
+                                <li>Consumed by troops daily</li>
+                                <li>Prioritize early game</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="priority-card">
+                            <h5><i class="fas fa-tree"></i> Wood</h5>
+                            <ul>
+                                <li>Used for most buildings</li>
+                                <li>Needed for research</li>
+                                <li>Important all game</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="priority-card">
+                            <h5><i class="fas fa-mountain"></i> Stone</h5>
+                            <ul>
+                                <li>Used for defensive buildings</li>
+                                <li>Needed for wall upgrades</li>
+                                <li>Mid-game priority</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="priority-card">
+                            <h5><i class="fas fa-hammer"></i> Iron</h5>
+                            <ul>
+                                <li>Used for high-level troops</li>
+                                <li>Needed for siege equipment</li>
+                                <li>Late-game priority</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h3>Resource Gathering Tips</h3>
+                    <ul>
+                        <li><strong>Upgrade resource tiles</strong> outside your city regularly</li>
+                        <li><strong>Send troops to gather</strong> from world resource tiles</li>
+                        <li><strong>Complete daily quests</strong> for resource rewards</li>
+                        <li><strong>Join alliance resource tiles</strong> for bonus gathering speed</li>
+                        <li><strong>Use resource items</strong> from your inventory when needed</li>
+                    </ul>
+                </div>
+            </article>
+            
+            <!-- Building Strategy Section -->
+            <article id="building" class="wiki-article">
+                <h2><i class="fas fa-building"></i> Building Strategy</h2>
+                <div class="article-content">
+                    <p>Buildings are the foundation of your city. Upgrade them in this priority order:</p>
+                    
+                    <div class="wiki-table-container">
+                        <table class="wiki-table">
+                            <thead>
+                                <tr>
+                                    <th>Building</th>
+                                    <th>Priority</th>
+                                    <th>Reason</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Keep</td>
+                                    <td>Highest</td>
+                                    <td>Unlocks other buildings</td>
+                                </tr>
+                                <tr>
+                                    <td>Academy</td>
+                                    <td>High</td>
+                                    <td>Research provides permanent buffs</td>
+                                </tr>
+                                <tr>
+                                    <td>Resource Buildings</td>
+                                    <td>High</td>
+                                    <td>Steady resource flow</td>
+                                </tr>
+                                <tr>
+                                    <td>Military Buildings</td>
+                                    <td>Medium</td>
+                                    <td>Stronger troops for defense/attack</td>
+                                </tr>
+                                <tr>
+                                    <td>Wall</td>
+                                    <td>Medium</td>
+                                    <td>Defense against attacks</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h3>Building Tips</h3>
+                    <ul>
+                        <li>Always have buildings upgrading - use speedups during events</li>
+                        <li>Upgrade resource storage before large upgrades</li>
+                        <li>Plan your city layout with defense in mind</li>
+                        <li>Don't neglect your hospital - it saves wounded troops</li>
+                    </ul>
+                </div>
+            </article>
+            
+            <!-- Alliances Section -->
+            <article id="alliances" class="wiki-article">
+                <h2><i class="fas fa-users"></i> Alliance Guide</h2>
+                <div class="article-content">
+                    <p>Joining an alliance is the single most important thing you can do in Evony:</p>
+                    
+                    <div class="wiki-resource-grid">
+                        <div class="wiki-resource-card">
+                            <div class="wiki-resource-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h5>Protection</h5>
+                            <p>Alliance members can reinforce you when attacked and provide territory protection.</p>
+                        </div>
+                        
+                        <div class="wiki-resource-card">
+                            <div class="wiki-resource-icon">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                            <h5>Resources</h5>
+                            <p>Get help with construction and receive alliance gifts from purchases.</p>
+                        </div>
+                        
+                        <div class="wiki-resource-card">
+                            <div class="wiki-resource-icon">
+                                <i class="fas fa-chess-rook"></i>
+                            </div>
+                            <h5>Teamwork</h5>
+                            <p>Participate in rallies against powerful monsters and enemy players.</p>
+                        </div>
+                    </div>
+                    
+                    <h3>Choosing an Alliance</h3>
+                    <p>Look for these qualities in a good alliance:</p>
+                    <ul>
+                        <li><strong>Active members</strong> (50+ online daily)</li>
+                        <li><strong>Helpful leadership</strong> (R4/R5 who answer questions)</li>
+                        <li><strong>Similar timezone</strong> (For coordinated events)</li>
+                        <li><strong>Clear rules</strong> (About participation expectations)</li>
+                    </ul>
+                </div>
+            </article>
+            
+            <!-- Daily Routine Section -->
+            <article id="daily-routine" class="wiki-article">
+                <h2><i class="fas fa-calendar-day"></i> Daily Routine</h2>
+                <div class="article-content">
+                    <p>An efficient daily routine will maximize your progress:</p>
+                    
+                    <div class="wiki-table-container">
+                        <table class="wiki-table">
+                            <thead>
+                                <tr>
+                                    <th>Activity</th>
+                                    <th>Frequency</th>
+                                    <th>Priority</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Collect Resources</td>
+                                    <td>Every 2-4 hours</td>
+                                    <td>High</td>
+                                </tr>
+                                <tr>
+                                    <td>Complete Daily Quests</td>
+                                    <td>Daily</td>
+                                    <td>High</td>
+                                </tr>
+                                <tr>
+                                    <td>Attack Monsters</td>
+                                    <td>3-5 times/day</td>
+                                    <td>Medium</td>
+                                </tr>
+                                <tr>
+                                    <td>Gather Resources</td>
+                                    <td>Continuous</td>
+                                    <td>Medium</td>
+                                </tr>
+                                <tr>
+                                    <td>Check Mail/Alliance Chat</td>
+                                    <td>Multiple times/day</td>
+                                    <td>High</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h3>Weekly Activities</h3>
+                    <ul>
+                        <li><strong>Server War (SvS)</strong> - Every 2 weeks (participate for rewards)</li>
+                        <li><strong>Kill Event (KE)</strong> - When active (focus on monster killing)</li>
+                        <li><strong>Alliance Fest</strong> - Weekly event (complete tasks for rewards)</li>
+                    </ul>
+                </div>
+            </article>
+            
+            <!-- Common Mistakes Section -->
+            <article id="avoid-mistakes" class="wiki-article">
+                <h2><i class="fas fa-exclamation-circle"></i> Common Beginner Mistakes</h2>
+                <div class="article-content">
+                    <p>Avoid these common pitfalls that new players make:</p>
+                    
+                    <div class="wiki-resource-grid">
+                        <div class="wiki-resource-card" style="border-left: 4px solid #f44336;">
+                            <h5>1. Not Using a Shield</h5>
+                            <p>Going offline without a peace shield is the #1 way to lose resources and troops.</p>
+                        </div>
+                        
+                        <div class="wiki-resource-card" style="border-left: 4px solid #f44336;">
+                            <h5>2. Training Wrong Troops</h5>
+                            <p>Focusing on one troop type makes you vulnerable. Maintain a balanced army.</p>
+                        </div>
+                        
+                        <div class="wiki-resource-card" style="border-left: 4px solid #f44336;">
+                            <h5>3. Wasting Speedups</h5>
+                            <p>Using speedups outside of events wastes potential extra rewards.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="quick-tips">
+                        <h4><i class="fas fa-lightbulb"></i> Pro Tip</h4>
+                        <p>Always keep your resources below your warehouse protection limit when offline to prevent losing them in attacks.</p>
+                    </div>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="wiki-footer">
+        <div class="wiki-footer-content">
+            <div class="wiki-update">
+                <h3><i class="fas fa-sync-alt"></i> Last Updated</h3>
+                <ul class="wiki-update-list">
+                    <li class="wiki-update-item">
+                        <span class="wiki-update-date">Dec 10, 2023</span> - Added Daily Routine section
+                    </li>
+                    <li class="wiki-update-item">
+                        <span class="wiki-update-date">Dec 5, 2023</span> - Expanded Resource Management
+                    </li>
+                </ul>
+            </div>
+            <div class="wiki-contribute">
+                <h3><i class="fas fa-edit"></i> Need Help?</h3>
+                <p>Join our Discord server for personalized advice!</p>
+                <a href="#" class="wiki-contribute-btn">
+                    <i class="fab fa-discord"></i> Join Discord
+                </a>
+            </div>
+        </div>
+        <div class="wiki-copyright">
+            <p>&copy; 2023 1366+1402 Evony Wiki. All game content belongs to Evony.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Smooth scrolling for sidebar links
+        document.querySelectorAll('.sidebar-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
