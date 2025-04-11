@@ -3,76 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evony PvP Attack Layering Guide | 1366+1402 Wiki</title>
+    <title>PvP Combat Guide | 1366+1402 Evony Wiki</title>
     <link rel="stylesheet" href="../styles.css">
     <style>
-        /* Set all text to white */
-        .wiki-article, 
-        .wiki-article h2, 
-        .wiki-article h3, 
-        .wiki-article h4, 
-        .wiki-article h5,
-        .wiki-article p,
-        .wiki-article li,
-        .wiki-article td,
-        .wiki-article th,
-        .wiki-article span,
-        .wiki-article .article-content * {
-            color: white !important;
-        }
-
-        /* Additional PvP-specific styles */
-        .attack-type {
-            border-left: 4px solid var(--accent);
-            padding-left: 1rem;
-            margin: 1.5rem 0;
-        }
-        .tier-comparison {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
-        .tier-card {
-            background: rgba(255,255,255,0.05);
-            padding: 1rem;
-            border-radius: 8px;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        .weakness-chain {
+        .counter-system {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 1rem;
+            gap: 2rem;
             margin: 2rem 0;
             flex-wrap: wrap;
         }
-        .weakness-icon {
+        
+        .counter-unit {
+            text-align: center;
+            width: 120px;
+        }
+        
+        .counter-icon {
             width: 60px;
             height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            margin: 0 auto;
             font-size: 1.5rem;
+            margin-bottom: 0.5rem;
         }
-        .weakness-arrow {
-            font-size: 1.2rem;
+        
+        .counter-arrow {
+            font-size: 1.5rem;
             color: var(--accent);
         }
         
-        /* Ensure tables have proper contrast */
-        .wiki-table th {
-            background: rgba(110, 69, 226, 0.3) !important;
-        }
-        .wiki-table td {
-            border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+        .attack-composition {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
         }
         
-        /* Improve card visibility */
-        .wiki-resource-card {
-            background: rgba(255,255,255,0.08) !important;
-            border: 1px solid rgba(255,255,255,0.15) !important;
+        .attack-type {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--accent);
+        }
+        
+        .layer-visual {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .layer {
+            padding: 0.5rem;
+            border-radius: 5px;
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -85,8 +74,9 @@
         </div>
         <div class="nav-links">
             <a href="index.html">Home</a>
-            <a href="war-scores.html">War Scores</a>
-            <a href="guides.html">Guides</a>
+            <a href="index.html#rules">Rules</a>
+            <a href="index.html#sub-cities">Sub Cities</a>
+            <a href="index.html#warScoreData">War Score</a>
             <a href="wiki.html">Wiki</a>
         </div>
     </nav>
@@ -94,198 +84,162 @@
     <!-- Hero Section -->
     <section class="wiki-hero" style="background: linear-gradient(135deg, rgba(226, 69, 69, 0.8), rgba(15, 15, 27, 0.9))">
         <div class="wiki-hero-content">
-            <h1 style="color: white !important;">PvP Attack Layering Guide</h1>
-            <p style="color: white !important;">Master the art of troop composition to dominate in player battles</p>
+            <h1>PvP Combat Guide</h1>
+            <p>Master the art of player vs player combat in Evony</p>
         </div>
     </section>
 
-    <!-- Main Content -->
     <div class="wiki-container">
         <aside class="wiki-sidebar">
             <div class="wiki-sidebar-section">
-                <h3><i class="fas fa-chess-board"></i> Attack Types</h3>
+                <h3><i class="fas fa-chess-board"></i> PvP Basics</h3>
                 <ul>
-                    <li><a href="#basic-layering" class="sidebar-link">Basic Layering</a></li>
-                    <li><a href="#counter-system" class="sidebar-link">Counter System</a></li>
-                    <li><a href="#archer-attack" class="sidebar-link">Archer Bomb</a></li>
-                    <li><a href="#cavalry-attack" class="sidebar-link">Cavalry Smash</a></li>
-                    <li><a href="#infantry-attack" class="sidebar-link">Infantry Push</a></li>
-                    <li><a href="#rally-attacks" class="sidebar-link">Rally Attacks</a></li>
+                    <li><a href="#counter-system">Counter System</a></li>
+                    <li><a href="#layering">Troop Layering</a></li>
+                    <li><a href="#scouting">Scouting</a></li>
                 </ul>
             </div>
+            
+            <div class="wiki-sidebar-section">
+                <h3><i class="fas fa-crosshairs"></i> Attack Types</h3>
+                <ul>
+                    <li><a href="#archer-bomb">Archer Bomb</a></li>
+                    <li><a href="#cavalry-smash">Cavalry Smash</a></li>
+                    <li><a href="#infantry-push">Infantry Push</a></li>
+                    <li><a href="#rally-attacks">Rally Attacks</a></li>
+                </ul>
+            </div>
+            
             <div class="wiki-sidebar-section">
                 <h3><i class="fas fa-shield-alt"></i> Defense</h3>
                 <ul>
-                    <li><a href="#recognizing-layers" class="sidebar-link">Recognizing Layers</a></li>
-                    <li><a href="#countering-attacks" class="sidebar-link">Countering Attacks</a></li>
+                    <li><a href="#defensive-layers">Defensive Layers</a></li>
+                    <li><a href="#bubbling">Bubble Management</a></li>
+                    <li><a href="#reinforcement">Reinforcement</a></li>
                 </ul>
             </div>
         </aside>
 
         <main class="wiki-content">
-            <!-- Introduction -->
-            <article class="wiki-article">
-                <h2><i class="fas fa-crosshairs"></i> PvP Attack Fundamentals</h2>
+            <!-- Counter System Section -->
+            <article id="counter-system" class="wiki-article">
+                <h2><i class="fas fa-retweet"></i> Troop Counter System</h2>
                 <div class="article-content">
-                    <p>Proper troop layering is the difference between crushing victories and devastating losses in Evony PvP. This guide covers advanced layering techniques for Keep Level 25+ players.</p>
+                    <p>Evony's combat follows a rock-paper-scissors counter system:</p>
+                    
+                    <div class="counter-system">
+                        <div class="counter-unit">
+                            <div class="counter-icon" style="background: rgba(33, 150, 243, 0.2); color: #2196F3;">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4>Infantry</h4>
+                            <p>Beats Cavalry</p>
+                        </div>
+                        
+                        <div class="counter-arrow">→</div>
+                        
+                        <div class="counter-unit">
+                            <div class="counter-icon" style="background: rgba(233, 30, 99, 0.2); color: #E91E63;">
+                                <i class="fas fa-horse"></i>
+                            </div>
+                            <h4>Cavalry</h4>
+                            <p>Beats Archers</p>
+                        </div>
+                        
+                        <div class="counter-arrow">→</div>
+                        
+                        <div class="counter-unit">
+                            <div class="counter-icon" style="background: rgba(76, 175, 80, 0.2); color: #4CAF50;">
+                                <i class="fas fa-bow-arrow"></i>
+                            </div>
+                            <h4>Archers</h4>
+                            <p>Beats Infantry</p>
+                        </div>
+                        
+                        <div class="counter-arrow">→</div>
+                        
+                        <div class="counter-unit">
+                            <div class="counter-icon" style="background: rgba(33, 150, 243, 0.2); color: #2196F3;">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4>Infantry</h4>
+                            <p>Cycle Repeats</p>
+                        </div>
+                    </div>
                     
                     <div class="wiki-info-box">
-                        <h4><i class="fas fa-lightbulb"></i> Key Concepts</h4>
-                        <ul>
-                            <li><strong>Layers:</strong> T1-T9 troops that absorb hits before your main T10-T13</li>
-                            <li><strong>March Capacity:</strong> Fill 70% with layers, 30% with main attack force</li>
-                            <li><strong>Counter System:</strong> Infantry > Cavalry > Archers > Infantry</li>
-                            <li><strong>Power Ratio:</strong> Never attack players >20% stronger than you</li>
-                        </ul>
+                        <h4><i class="fas fa-lightbulb"></i> Key Insight</h4>
+                        <p>Siege weapons don't follow the counter system but are essential for destroying traps and walls. Always include some siege in your attacks.</p>
                     </div>
-
-                    <div class="weakness-chain">
-                        <div class="weakness-icon" style="background: rgba(33, 150, 243, 0.2);">
-                            <i class="fas fa-shield-alt" style="color: #2196F3;"></i>
-                        </div>
-                        <span class="weakness-arrow">→</span>
-                        <div class="weakness-icon" style="background: rgba(233, 30, 99, 0.2);">
-                            <i class="fas fa-horse" style="color: #E91E63;"></i>
-                        </div>
-                        <span class="weakness-arrow">→</span>
-                        <div class="weakness-icon" style="background: rgba(76, 175, 80, 0.2);">
-                            <i class="fas fa-bow-arrow" style="color: #4CAF50;"></i>
-                        </div>
-                        <span class="weakness-arrow">→</span>
-                        <div class="weakness-icon" style="background: rgba(33, 150, 243, 0.2);">
-                            <i class="fas fa-shield-alt" style="color: #2196F3;"></i>
-                        </div>
-                    </div>
-                    <p style="text-align: center;">Infantry beats Cavalry beats Archers beats Infantry</p>
                 </div>
             </article>
-
-            <!-- Basic Layering -->
-            <article id="basic-layering" class="wiki-article">
-                <h2><i class="fas fa-layer-group"></i> Basic Layering Structure</h2>
+            
+            <!-- Layering Section -->
+            <article id="layering" class="wiki-article">
+                <h2><i class="fas fa-layer-group"></i> Troop Layering</h2>
                 <div class="article-content">
-                    <p>Every successful attack march should contain these essential components:</p>
+                    <p>Proper layering protects your main troops by having weaker troops absorb initial hits:</p>
                     
-                    <div class="wiki-table-container">
-                        <table class="wiki-table">
-                            <thead>
-                                <tr>
-                                    <th>Layer Type</th>
-                                    <th>Troop Composition</th>
-                                    <th>Purpose</th>
-                                    <th>Recommended Amount</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Meat Shield</td>
-                                    <td>T1-T3 Infantry</td>
-                                    <td>Absorb initial hits</td>
-                                    <td>10,000-20,000</td>
-                                </tr>
-                                <tr>
-                                    <td>Counter Layer</td>
-                                    <td>T4-T6 of counter type</td>
-                                    <td>Engage enemy main force</td>
-                                    <td>5,000-10,000</td>
-                                </tr>
-                                <tr>
-                                    <td>Main Attack</td>
-                                    <td>T10-T12 of counter type</td>
-                                    <td>Deal primary damage</td>
-                                    <td>Fill remaining capacity</td>
-                                </tr>
-                                <tr>
-                                    <td>Siege</td>
-                                    <td>T9+ Siege</td>
-                                    <td>Destroy traps/walls</td>
-                                    <td>500-1,000</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div class="attack-type">
-                        <h4>Example March Composition (250k capacity)</h4>
-                        <div class="tier-comparison">
-                            <div class="tier-card">
-                                <h5><i class="fas fa-shield-alt" style="color: #2196F3;"></i> Meat Shield</h5>
-                                <ul>
-                                    <li>15k T1 Infantry</li>
-                                    <li>5k T2 Infantry</li>
-                                    <li>3k T3 Infantry</li>
-                                </ul>
-                            </div>
-                            <div class="tier-card">
-                                <h5><i class="fas fa-chess-knight" style="color: #E91E63;"></i> Counter Layer</h5>
-                                <ul>
-                                    <li>8k T4 Cavalry</li>
-                                    <li>5k T5 Cavalry</li>
-                                </ul>
-                            </div>
-                            <div class="tier-card">
-                                <h5><i class="fas fa-bolt" style="color: #FFC107;"></i> Main Attack</h5>
-                                <ul>
-                                    <li>180k T11 Cavalry</li>
-                                    <li>20k T10 Cavalry</li>
-                                </ul>
-                            </div>
-                            <div class="tier-card">
-                                <h5><i class="fas fa-catapult" style="color: #9C27B0;"></i> Siege</h5>
-                                <ul>
-                                    <li>800 T10 Siege</li>
-                                    <li>200 T9 Siege</li>
-                                </ul>
-                            </div>
+                    <div class="layer-visual">
+                        <div class="layer" style="background: rgba(255,255,255,0.1);">
+                            <strong>Meat Shield:</strong> 10k-20k T1-T3 Infantry
+                        </div>
+                        <div class="layer" style="background: rgba(255,255,255,0.15);">
+                            <strong>Counter Layer:</strong> 5k-10k T4-T6 of counter type
+                        </div>
+                        <div class="layer" style="background: rgba(255,255,255,0.2);">
+                            <strong>Main Attack:</strong> Highest tier troops (fill remaining capacity)
+                        </div>
+                        <div class="layer" style="background: rgba(255,255,255,0.1);">
+                            <strong>Siege:</strong> 500-1k T9+ to destroy traps
                         </div>
                     </div>
+                    
+                    <h3>Why Layering Works</h3>
+                    <ul>
+                        <li>Lower tier troops die first, preserving your powerful troops</li>
+                        <li>Layers trigger enemy traps and siege attacks</li>
+                        <li>Provides time for your main force to engage</li>
+                        <li>Reduces overall troop losses in battle</li>
+                    </ul>
                 </div>
             </article>
-
-            <!-- Archer Bomb -->
-            <article id="archer-attack" class="wiki-article">
+            
+            <!-- Archer Bomb Section -->
+            <article id="archer-bomb" class="wiki-article">
                 <h2><i class="fas fa-bow-arrow"></i> Archer Bomb Attack</h2>
                 <div class="article-content">
                     <p>Devastating against infantry-heavy defenses but vulnerable to cavalry:</p>
                     
-                    <div class="wiki-resource-grid">
-                        <div class="wiki-resource-card">
-                            <div class="wiki-resource-icon" style="background: rgba(76, 175, 80, 0.15);">
-                                <i class="fas fa-bow-arrow" style="color: #4CAF50;"></i>
-                            </div>
-                            <h5>Optimal Layers</h5>
+                    <div class="attack-composition">
+                        <div class="attack-type">
+                            <h4><i class="fas fa-shield-alt"></i> Meat Shield</h4>
                             <ul>
                                 <li>20k T1 Infantry</li>
                                 <li>10k T2 Infantry</li>
                                 <li>5k T3 Infantry</li>
-                                <li>8k T4 Archers</li>
-                                <li>5k T5 Archers</li>
                             </ul>
                         </div>
-                        <div class="wiki-resource-card">
-                            <div class="wiki-resource-icon" style="background: rgba(139, 195, 74, 0.15);">
-                                <i class="fas fa-bolt" style="color: #8BC34A;"></i>
-                            </div>
-                            <h5>Main Force</h5>
+                        
+                        <div class="attack-type">
+                            <h4><i class="fas fa-bow-arrow"></i> Archer Layers</h4>
+                            <ul>
+                                <li>8k T4 Archers</li>
+                                <li>5k T5 Archers</li>
+                                <li>3k T6 Archers</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="attack-type">
+                            <h4><i class="fas fa-bolt"></i> Main Force</h4>
                             <ul>
                                 <li>150k T12 Archers</li>
                                 <li>30k T11 Archers</li>
                                 <li>1k T10 Siege</li>
                             </ul>
                         </div>
-                        <div class="wiki-resource-card">
-                            <div class="wiki-resource-icon" style="background: rgba(244, 67, 54, 0.15);">
-                                <i class="fas fa-user-shield" style="color: #f44336;"></i>
-                            </div>
-                            <h5>Best Generals</h5>
-                            <ul>
-                                <li>Electra (Archer Attack +35%)</li>
-                                <li>Hua Mulan (Archer HP +25%)</li>
-                                <li>Zhang Fei (Infantry Debuff)</li>
-                            </ul>
-                        </div>
                     </div>
-
+                    
                     <div class="wiki-info-box">
                         <h4><i class="fas fa-trophy"></i> When to Use Archer Bomb</h4>
                         <ul>
@@ -297,12 +251,12 @@
                     </div>
                 </div>
             </article>
-
-            <!-- Cavalry Attack -->
-            <article id="cavalry-attack" class="wiki-article">
-                <h2><i class="fas fa-horse"></i> Cavalry Smash Attack</h2>
+            
+            <!-- Cavalry Smash Section -->
+            <article id="cavalry-smash" class="wiki-article">
+                <h2><i class="fas fa-horse"></i> Cavalry Smash</h2>
                 <div class="article-content">
-                    <p>Blitzkrieg-style attack against archer-heavy defenses:</p>
+                    <p>Fast attack against archer-heavy defenses:</p>
                     
                     <div class="wiki-table-container">
                         <table class="wiki-table">
@@ -337,29 +291,27 @@
                             </tbody>
                         </table>
                     </div>
-
-                    <div class="attack-type">
-                        <h4>Cavalry Attack Buff Priority</h4>
-                        <ol>
-                            <li><strong>March Speed</strong> (Arrive before reinforcements)</li>
-                            <li><strong>Cavalry Attack</strong> (Minimum +50% total)</li>
-                            <li><strong>Enemy Archer Debuff</strong> (General skills)</li>
-                            <li><strong>March Size</strong> (More troops = more damage)</li>
-                        </ol>
-                    </div>
+                    
+                    <h3>Cavalry Attack Buff Priority</h3>
+                    <ol>
+                        <li><strong>March Speed</strong> (Arrive before reinforcements)</li>
+                        <li><strong>Cavalry Attack</strong> (Minimum +50% total)</li>
+                        <li><strong>Enemy Archer Debuff</strong> (General skills)</li>
+                        <li><strong>March Size</strong> (More troops = more damage)</li>
+                    </ol>
                 </div>
             </article>
-
-            <!-- Rally Attacks -->
+            
+            <!-- Rally Attacks Section -->
             <article id="rally-attacks" class="wiki-article">
-                <h2><i class="fas fa-users"></i> Rally Attack Strategies</h2>
+                <h2><i class="fas fa-users"></i> Rally Attacks</h2>
                 <div class="article-content">
                     <p>Coordinate with your alliance to take down powerful enemies:</p>
                     
                     <div class="wiki-resource-grid">
                         <div class="wiki-resource-card">
-                            <div class="wiki-resource-icon" style="background: rgba(156, 39, 176, 0.15);">
-                                <i class="fas fa-chess-rook" style="color: #9C27B0;"></i>
+                            <div class="wiki-resource-icon">
+                                <i class="fas fa-chess-rook"></i>
                             </div>
                             <h5>Rally Composition</h5>
                             <ul>
@@ -369,9 +321,10 @@
                                 <li>5% Siege</li>
                             </ul>
                         </div>
+                        
                         <div class="wiki-resource-card">
-                            <div class="wiki-resource-icon" style="background: rgba(0, 188, 212, 0.15);">
-                                <i class="fas fa-clock" style="color: #00BCD4;"></i>
+                            <div class="wiki-resource-icon">
+                                <i class="fas fa-clock"></i>
                             </div>
                             <h5>Timing Strategy</h5>
                             <ul>
@@ -380,9 +333,10 @@
                                 <li>Coordinate with alliance buffs</li>
                             </ul>
                         </div>
+                        
                         <div class="wiki-resource-card">
-                            <div class="wiki-resource-icon" style="background: rgba(255, 152, 0, 0.15);">
-                                <i class="fas fa-user-ninja" style="color: #FF9800;"></i>
+                            <div class="wiki-resource-icon">
+                                <i class="fas fa-user-ninja"></i>
                             </div>
                             <h5>Advanced Tactics</h5>
                             <ul>
@@ -392,7 +346,7 @@
                             </ul>
                         </div>
                     </div>
-
+                    
                     <div class="wiki-info-box" style="border-left: 4px solid #f44336;">
                         <h4><i class="fas fa-skull-crossbones"></i> Rally Target Selection</h4>
                         <ul>
@@ -404,46 +358,36 @@
                     </div>
                 </div>
             </article>
-
+            
             <!-- Defense Section -->
-            <article id="recognizing-layers" class="wiki-article">
-                <h2><i class="fas fa-eye"></i> Recognizing Attack Layers</h2>
+            <article id="defensive-layers" class="wiki-article">
+                <h2><i class="fas fa-shield-alt"></i> Defensive Strategies</h2>
                 <div class="article-content">
-                    <p>Identify incoming attack types to prepare proper defenses:</p>
+                    <p>A strong defense requires proper troop composition and layers:</p>
                     
-                    <div class="wiki-table-container">
-                        <table class="wiki-table">
-                            <thead>
-                                <tr>
-                                    <th>Attack Signature</th>
-                                    <th>Likely Composition</th>
-                                    <th>Best Counter</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Slow march speed (≥1:30)</td>
-                                    <td>Infantry-heavy</td>
-                                    <td>Archers + Traps</td>
-                                </tr>
-                                <tr>
-                                    <td>Fast march speed (≤0:45)</td>
-                                    <td>Cavalry-heavy</td>
-                                    <td>Pikemen + Ground</td>
-                                </tr>
-                                <tr>
-                                    <td>Medium speed (~1:00)</td>
-                                    <td>Balanced/Archer</td>
-                                    <td>Cavalry + Siege</td>
-                                </tr>
-                                <tr>
-                                    <td>Multiple similar marches</td>
-                                    <td>Rally forming</td>
-                                    <td>Shield or reinforce</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="layer-visual">
+                        <div class="layer" style="background: rgba(255,255,255,0.1);">
+                            <strong>T1-T4 Troops:</strong> 50k-100k each type (meat shield)
+                        </div>
+                        <div class="layer" style="background: rgba(255,255,255,0.15);">
+                            <strong>T5-T8 Troops:</strong> 20k-50k each type (mid layers)
+                        </div>
+                        <div class="layer" style="background: rgba(255,255,255,0.2);">
+                            <strong>T9-T12 Troops:</strong> Main defensive force
+                        </div>
+                        <div class="layer" style="background: rgba(255,255,255,0.1);">
+                            <strong>Siege:</strong> 5k+ (trap destruction)
+                        </div>
                     </div>
+                    
+                    <h3>Defensive Tips</h3>
+                    <ul>
+                        <li>Keep your wall defenses upgraded</li>
+                        <li>Assign defensive generals with appropriate skills</li>
+                        <li>Use the "Defensive Formation" research</li>
+                        <li>Keep troops sheltered when under heavy attack</li>
+                        <li>Ask for alliance reinforcements when needed</li>
+                    </ul>
                 </div>
             </article>
         </main>
@@ -456,16 +400,19 @@
                 <h3><i class="fas fa-sync-alt"></i> Update History</h3>
                 <ul class="wiki-update-list">
                     <li class="wiki-update-item">
-                        <span class="wiki-update-date">Dec 5, 2023</span> - Added T13 layer recommendations
+                        <span class="wiki-update-date">Dec 15, 2023</span> - Added T13 tactics
                     </li>
                     <li class="wiki-update-item">
-                        <span class="wiki-update-date">Nov 28, 2023</span> - New cavalry smash tactics
+                        <span class="wiki-update-date">Dec 10, 2023</span> - Improved rally strategies
                     </li>
                 </ul>
             </div>
             <div class="wiki-contribute">
-                <h3><i class="fas fa-edit"></i> Test Your Knowledge</h3>
-                <p>Practice layering in the <a href="#" style="color: var(--secondary) !important;">Evony Battle Simulator</a></p>
+                <h3><i class="fas fa-edit"></i> Practice PvP</h3>
+                <p>Test your strategies in the Battle Simulator</p>
+                <a href="#" class="wiki-contribute-btn">
+                    <i class="fas fa-chess"></i> Open Simulator
+                </a>
             </div>
         </div>
         <div class="wiki-copyright">
@@ -474,25 +421,12 @@
     </footer>
 
     <script>
-        // Tab functionality
-        document.querySelectorAll('.wiki-tab-button').forEach(button => {
-            button.addEventListener('click', function() {
-                const tabId = this.getAttribute('data-tab');
-                const tabContainer = this.closest('.article-content');
-                
-                tabContainer.querySelectorAll('.wiki-tab-button').forEach(btn => {
-                    btn.classList.remove('active');
-                });
-                tabContainer.querySelectorAll('.wiki-tab-content').forEach(content => {
-                    content.classList.remove('active');
-                });
-                
-                this.classList.add('active');
-                document.getElementById(tabId).classList.add('active');
-            });
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
         });
 
-        // Smooth scrolling
+        // Smooth scrolling for sidebar links
         document.querySelectorAll('.sidebar-link').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();

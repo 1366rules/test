@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farming Guide | 1366+1402 Evony Wiki</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .gathering-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .resource-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-top: 4px solid;
+        }
+        
+        .food-card { border-color: #8BC34A; }
+        .wood-card { border-color: #795548; }
+        .stone-card { border-color: #9E9E9E; }
+        .iron-card { border-color: #607D8B; }
+        
+        .tile-levels {
+            display: flex;
+            justify-content: space-between;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .tile-level {
+            background: rgba(255,255,255,0.1);
+            padding: 0.5rem;
+            border-radius: 5px;
+            text-align: center;
+            flex: 1;
+            min-width: 60px;
+        }
+        
+        .march-comparison {
+            display: flex;
+            justify-content: space-between;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .march-type {
+            background: rgba(255,255,255,0.05);
+            padding: 1rem;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 250px;
+        }
+    </style>
+</head>
+<body class="wiki-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">1366+1402<span> EVONY</span></a>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#rules">Rules</a>
+            <a href="index.html#sub-cities">Sub Cities</a>
+            <a href="index.html#warScoreData">War Score</a>
+            <a href="wiki.html">Wiki</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="wiki-hero" style="background: linear-gradient(135deg, rgba(139, 195, 74, 0.8), rgba(15, 15, 27, 0.9))">
+        <div class="wiki-hero-content">
+            <h1>Farming Guide</h1>
+            <p>Maximize your resource gathering efficiency</p>
+        </div>
+    </section>
+
+    <div class="wiki-container">
+        <aside class="wiki-sidebar">
+            <div class="wiki-sidebar-section">
+                <h3><i class="fas fa-tractor"></i> Gathering Basics</h3>
+                <ul>
+                    <li><a href="#resource-types">Resource Types</a></li>
+                    <li><a href="#tile-levels">Tile Levels</a></li>
+                    <li><a href="#march-setup">March Setup</a></li>
+                </ul>
+            </div>
+            
+            <div class="wiki-sidebar-section">
+                <h3><i class="fas fa-chart-line"></i> Advanced Tips</h3>
+                <ul>
+                    <li><a href="#alliance-tiles">Alliance Tiles</a></li>
+                    <li><a href="#gathering-generals">Best Generals</a></li>
+                    <li><a href="#efficiency">Maximizing Efficiency</a></li>
+                </ul>
+            </div>
+            
+            <div class="wiki-sidebar-section">
+                <h3><i class="fas fa-robot"></i> Automation</h3>
+                <ul>
+                    <li><a href="#multi-account">Multi-Account Farming</a></li>
+                    <li><a href="#scheduling">Gathering Schedule</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="wiki-content">
+            <!-- Resource Types Section -->
+            <article id="resource-types" class="wiki-article">
+                <h2><i class="fas fa-coins"></i> Resource Types</h2>
+                <div class="article-content">
+                    <p>There are four main resources in Evony, each with different uses:</p>
+                    
+                    <div class="gathering-stats">
+                        <div class="resource-card food-card">
+                            <h4><i class="fas fa-bread-slice"></i> Food</h4>
+                            <ul>
+                                <li>Trains and maintains troops</li>
+                                <li>Most needed early game</li>
+                                <li>Gathered with ground troops</li>
+                                <li>Prioritize early game</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="resource-card wood-card">
+                            <h4><i class="fas fa-tree"></i> Wood</h4>
+                            <ul>
+                                <li>Builds and upgrades structures</li>
+                                <li>Used throughout the game</li>
+                                <li>Gathered with ground troops</li>
+                                <li>Always in demand</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="resource-card stone-card">
+                            <h4><i class="fas fa-mountain"></i> Stone</h4>
+                            <ul>
+                                <li>Upgrades walls and defenses</li>
+                                <li>Mid-game priority</li>
+                                <li>Gathered with siege weapons</li>
+                                <li>Important for keep 25+</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="resource-card iron-card">
+                            <h4><i class="fas fa-hammer"></i> Iron</h4>
+                            <ul>
+                                <li>Trains high-tier troops</li>
+                                <li>Late-game priority</li>
+                                <li>Gathered with siege weapons</li>
+                                <li>Most valuable resource</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Tile Levels Section -->
+            <article id="tile-levels" class="wiki-article">
+                <h2><i class="fas fa-map-marked-alt"></i> Resource Tile Levels</h2>
+                <div class="article-content">
+                    <p>Higher level tiles provide more resources but require stronger marches:</p>
+                    
+                    <h3>Tile Level Comparison</h3>
+                    <div class="tile-levels">
+                        <div class="tile-level">
+                            <h5>Level 1-3</h5>
+                            <p>5k-15k resources</p>
+                            <small>Good for new players</small>
+                        </div>
+                        
+                        <div class="tile-level">
+                            <h5>Level 4-6</h5>
+                            <p>20k-50k resources</p>
+                            <small>Mid-game standard</small>
+                        </div>
+                        
+                        <div class="tile-level">
+                            <h5>Level 7-9</h5>
+                            <p>60k-120k resources</p>
+                            <small>Advanced gathering</small>
+                        </div>
+                        
+                        <div class="tile-level">
+                            <h5>Level 10+</h5>
+                            <p>150k+ resources</p>
+                            <small>Alliance tiles only</small>
+                        </div>
+                    </div>
+                    
+                    <div class="wiki-info-box">
+                        <h4><i class="fas fa-lightbulb"></i> Pro Tip</h4>
+                        <p>Focus on tiles that your march can clear in 1-2 hours. Longer gathering times leave your troops vulnerable.</p>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- March Setup Section -->
+            <article id="march-setup" class="wiki-article">
+                <h2><i class="fas fa-people-carry"></i> March Setup for Gathering</h2>
+                <div class="article-content">
+                    <p>Optimal march composition varies by resource type:</p>
+                    
+                    <div class="march-comparison">
+                        <div class="march-type">
+                            <h4><i class="fas fa-bread-slice"></i> Food/Wood</h4>
+                            <ul>
+                                <li>50% T1 Cavalry (speed)</li>
+                                <li>30% Siege (carry capacity)</li>
+                                <li>20% Ground (protection)</li>
+                                <li>1 general with gathering skills</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="march-type">
+                            <h4><i class="fas fa-mountain"></i> Stone/Iron</h4>
+                            <ul>
+                                <li>60% Siege (required)</li>
+                                <li>30% Cavalry (speed)</li>
+                                <li>10% Ground (protection)</li>
+                                <li>1 general with siege buffs</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h3>March Capacity Calculation</h3>
+                    <p>Total capacity = (Troop capacity) × (Research + General + Alliance buffs)</p>
+                    
+                    <div class="wiki-table-container">
+                        <table class="wiki-table">
+                            <thead>
+                                <tr>
+                                    <th>Troop Type</th>
+                                    <th>Capacity per 1k troops</th>
+                                    <th>Speed</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ground</td>
+                                    <td>50k</td>
+                                    <td>Slow</td>
+                                </tr>
+                                <tr>
+                                    <td>Cavalry</td>
+                                    <td>100k</td>
+                                    <td>Fast</td>
+                                </tr>
+                                <tr>
+                                    <td>Archers</td>
+                                    <td>30k</td>
+                                    <td>Medium</td>
+                                </tr>
+                                <tr>
+                                    <td>Siege</td>
+                                    <td>500k</td>
+                                    <td>Very Slow</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Alliance Tiles Section -->
+            <article id="alliance-tiles" class="wiki-article">
+                <h2><i class="fas fa-users"></i> Alliance Resource Tiles</h2>
+                <div class="article-content">
+                    <p>Alliance tiles provide significant benefits over regular tiles:</p>
+                    
+                    <div class="wiki-resource-grid">
+                        <div class="wiki-resource-card">
+                            <div class="wiki-resource-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h5>Faster Gathering</h5>
+                            <p>50-100% faster gathering speed compared to normal tiles</p>
+                        </div>
+                        
+                        <div class="wiki-resource-card">
+                            <div class="wiki-resource-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h5>Safer Gathering</h5>
+                            <p>Protected by alliance territory - enemies can't attack</p>
+                        </div>
+                        
+                        <div class="wiki-resource-card">
+                            <div class="wiki-resource-icon">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <h5>Better Resources</h5>
+                            <p>Higher level tiles (10-15) with more resources</p>
+                        </div>
+                    </div>
+                    
+                    <h3>How to Use Alliance Tiles</h3>
+                    <ol>
+                        <li>Teleport your city near alliance territory</li>
+                        <li>Coordinate with R4/R5 for optimal tile placement</li>
+                        <li>Upgrade alliance resource technology</li>
+                        <li>Share high-level tiles with alliance members</li>
+                    </ol>
+                </div>
+            </article>
+            
+            <!-- Gathering Generals Section -->
+            <article id="gathering-generals" class="wiki-article">
+                <h2><i class="fas fa-user-tie"></i> Best Gathering Generals</h2>
+                <div class="article-content">
+                    <p>Specialized generals can dramatically improve gathering efficiency:</p>
+                    
+                    <div class="wiki-table-container">
+                        <table class="wiki-table">
+                            <thead>
+                                <tr>
+                                    <th>General</th>
+                                    <th>Specialty</th>
+                                    <th>Best For</th>
+                                    <th>Skill Priority</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Queen Jindeok</td>
+                                    <td>Food/Wood +50%</td>
+                                    <td>Early game resources</td>
+                                    <td>Gathering Speed</td>
+                                </tr>
+                                <tr>
+                                    <td>Darius I</td>
+                                    <td>Stone/Iron +40%</td>
+                                    <td>Construction materials</td>
+                                    <td>Siege Capacity</td>
+                                </tr>
+                                <tr>
+                                    <td>Constance</td>
+                                    <td>All +30%</td>
+                                    <td>Balanced gathering</td>
+                                    <td>March Speed</td>
+                                </tr>
+                                <tr>
+                                    <td>Princess Lucy</td>
+                                    <td>Speed +25%</td>
+                                    <td>Quick turnarounds</td>
+                                    <td>Load Capacity</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="wiki-info-box">
+                        <h4><i class="fas fa-star"></i> General Development</h4>
+                        <p>Focus on leveling one gathering general at a time. Prioritize:</p>
+                        <ol>
+                            <li>Gathering Speed</li>
+                            <li>Load Capacity</li>
+                            <li>March Speed</li>
+                        </ol>
+                    </div>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="wiki-footer">
+        <div class="wiki-footer-content">
+            <div class="wiki-update">
+                <h3><i class="fas fa-sync-alt"></i> Update History</h3>
+                <ul class="wiki-update-list">
+                    <li class="wiki-update-item">
+                        <span class="wiki-update-date">Dec 12, 2023</span> - Added T13 gathering data
+                    </li>
+                    <li class="wiki-update-item">
+                        <span class="wiki-update-date">Dec 5, 2023</span> - Updated general recommendations
+                    </li>
+                </ul>
+            </div>
+            <div class="wiki-contribute">
+                <h3><i class="fas fa-calculator"></i> Gathering Calculator</h3>
+                <p>Calculate optimal march compositions</p>
+                <a href="#" class="wiki-contribute-btn">
+                    <i class="fas fa-tools"></i> Open Calculator
+                </a>
+            </div>
+        </div>
+        <div class="wiki-copyright">
+            <p>&copy; 2023 1366+1402 Evony Farmers Association. All resource values based on server averages.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Smooth scrolling for sidebar links
+        document.querySelectorAll('.sidebar-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
