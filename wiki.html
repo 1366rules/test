@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1366 + 1402 Evony - The Kings Return</title>
-
     <meta name="author" content="Angga Kurniawan (@g4rzk)">
     <meta name="keywords" content="1366 Evony, Evony">
     <meta name="description" content="Join hundreds of players on server 1366+1402 with the best strategy. Build your keep, forge alliances, player vs player and conquer the throne.">
@@ -74,7 +73,7 @@
             </div>
         </div>
     </section>
-	
+    
     <!-- Wiki Main Content -->
     <div class="wiki-container">
         <!-- Sidebar Navigation -->
@@ -83,9 +82,9 @@
                 <h3><i class="fas fa-book-open"></i> Game Basics</h3>
                 <ul>
                     <li><a href="beginner-guide.html" class="sidebar-link">Game Guide & Tutorials</a></li>
-					<li><a href="pvp-guide.html" class="sidebar-link">PvP Attack Guide</a></li>
-					<li><a href="resources.html" class="sidebar-link">Resources</a></li>
-					<li><a href="buildings.html" class="sidebar-link">Buildings</a></li>
+                    <li><a href="pvp-guide.html" class="sidebar-link">PvP Attack Guide</a></li>
+                    <li><a href="resources.html" class="sidebar-link">Resources</a></li>
+                    <li><a href="buildings.html" class="sidebar-link">Buildings</a></li>
                 </ul>
             </div>
 
@@ -116,8 +115,69 @@
                 </ul>
             </div>
         </aside>
-	</div>
-	
+
+        <!-- Main Content Area -->
+        <main class="wiki-content">
+            <article id="troop-types" class="wiki-article">
+                <h2><i class="fas fa-shield-alt"></i> Troop Types</h2>
+                <div class="article-content">
+                    <p>Evony features four main troop types, each with strengths and weaknesses:</p>
+                    
+                    <div class="wiki-resource-grid">
+                        <div class="wiki-resource-card">
+                            <div class="wiki-resource-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h5>Infantry</h5>
+                            <p>Strong against Cavalry, weak against Archers. Best for defending against cavalry attacks.</p>
+                        </div>
+                        
+                        <div class="wiki-resource-card">
+                            <div class="wiki-resource-icon">
+                                <i class="fas fa-horse"></i>
+                            </div>
+                            <h5>Cavalry</h5>
+                            <p>Strong against Archers, weak against Infantry. Fast movement speed makes them ideal for attacks.</p>
+                        </div>
+                        
+                        <div class="wiki-resource-card">
+                            <div class="wiki-resource-icon">
+                                <i class="fas fa-bow-arrow"></i>
+                            </div>
+                            <h5>Archers</h5>
+                            <p>Strong against Infantry, weak against Cavalry. Excellent for defense when properly layered.</p>
+                        </div>
+                        
+                        <div class="wiki-resource-card">
+                            <div class="wiki-resource-icon">
+                                <i class="fas fa-catapult"></i>
+                            </div>
+                            <h5>Siege</h5>
+                            <p>Specialized for destroying walls and buildings. Essential for reducing enemy defenses.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="combat-mechanics" class="wiki-article">
+                <h2><i class="fas fa-fighter-jet"></i> Combat Mechanics</h2>
+                <div class="article-content">
+                    <p>Understanding combat mechanics is crucial for success in Evony:</p>
+                    
+                    <div class="wiki-info-box">
+                        <h4><i class="fas fa-lightbulb"></i> Key Concepts</h4>
+                        <ul>
+                            <li><strong>Troop Counters:</strong> Infantry > Cavalry > Archers > Infantry</li>
+                            <li><strong>March Speed:</strong> Cavalry fastest, Siege slowest</li>
+                            <li><strong>Power Calculation:</strong> Based on troop quantity and quality</li>
+                            <li><strong>Wounded vs Dead:</strong> Hospitals save a percentage of troops</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </main>
+    </div>
+    
     <!-- Wiki Footer -->
     <footer class="wiki-footer">
         <div class="wiki-footer-content">
@@ -138,9 +198,9 @@
             <div class="wiki-contribute">
                 <h3><i class="fas fa-edit"></i> Contribute</h3>
                 <p>Help us improve the wiki by submitting your knowledge!</p>
-                <button class="wiki-contribute-btn">
-                    <i href="mailto:admin@g4rzk.com" class="fas fa-edit"></i> Submit Edit
-                </button>
+                <a href="mailto:admin@g4rzk.com" class="wiki-contribute-btn">
+                    <i class="fas fa-edit"></i> Submit Edit
+                </a>
             </div>
         </div>
         <div class="wiki-copyright">
@@ -209,25 +269,24 @@
                 history.pushState(null, null, targetId);
             });
         });
-		<!-- In the head section -->
-		// Handle search functionality
-		document.querySelector('.wiki-search-btn').addEventListener('click', function() {
-			const searchTerm = document.querySelector('.wiki-search').value.trim();
-			if (searchTerm) {
-				window.location.href = `search.html?q=${encodeURIComponent(searchTerm)}`;
-			}
-		});
-		
-		// Allow Enter key to trigger search
-		document.querySelector('.wiki-search').addEventListener('keypress', function(e) {
-			if (e.key === 'Enter') {
-				const searchTerm = this.value.trim();
-				if (searchTerm) {
-					window.location.href = `search.html?q=${encodeURIComponent(searchTerm)}`;
-				}
-			}
-		});
-	</script>
+        
+        // Handle search functionality
+        document.querySelector('.wiki-search-btn').addEventListener('click', function() {
+            const searchTerm = document.querySelector('.wiki-search').value.trim();
+            if (searchTerm) {
+                window.location.href = `search.html?q=${encodeURIComponent(searchTerm)}`;
+            }
+        });
+        
+        // Allow Enter key to trigger search
+        document.querySelector('.wiki-search').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const searchTerm = this.value.trim();
+                if (searchTerm) {
+                    window.location.href = `search.html?q=${encodeURIComponent(searchTerm)}`;
+                }
+            }
+        });
+    </script>
 </body>
-
 </html>
